@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dra. Elaine Bezerra | Nutricionista Menopausa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --dark:#1b1022;
+      --dark-soft:#27142f;
+      --plum:#4d245f;
+      --lavender:#d7b8ff;
+      --coral:#ff8f78;
+      --champagne:#f3d8a7;
+      --cream:#fff7ef;
+      --white:#ffffff;
+      --muted:rgba(255,255,255,.74);
+      --muted-2:rgba(255,255,255,.50);
+      --line:rgba(255,255,255,.12);
+      --glass:rgba(255,255,255,.065);
+      --shadow:0 28px 80px rgba(0,0,0,.34);
+      --font:'Inter', Arial, sans-serif;
+      --display:'Marcellus', Georgia, serif;
+      --transition:all .35s cubic-bezier(.25,1,.5,1);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:var(--dark);
+      color:var(--white);
+      font-family:var(--font);
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:100%;
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 24px;
+      position:relative;
+      z-index:3;
+    }
+
+    .section{
+      position:relative;
+      overflow:hidden;
+      padding:92px 0;
+    }
+
+    .section::before,
+    .hero::before,
+    .cta-section::before{
+      content:"EB";
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      font-family:var(--display);
+      font-size:34vw;
+      font-weight:400;
+      line-height:1;
+      color:rgba(255,255,255,.026);
+      z-index:0;
+      pointer-events:none;
+      letter-spacing:-2vw;
+    }
+
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(215,184,255,.20), transparent 34%),
+        radial-gradient(circle at 86% 82%, rgba(255,143,120,.15), transparent 34%),
+        radial-gradient(circle at 50% 50%, rgba(243,216,167,.08), transparent 38%),
+        linear-gradient(180deg, rgba(27,16,34,.98), rgba(39,20,47,.94), rgba(27,16,34,.99));
+      z-index:1;
+    }
+
+    .glass{
+      background:var(--glass);
+      border:1px solid var(--line);
+      backdrop-filter:blur(14px);
+      box-shadow:var(--shadow);
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--champagne);
+      text-transform:uppercase;
+      letter-spacing:2.8px;
+      font-size:11px;
+      font-weight:900;
+      border:1px solid rgba(243,216,167,.30);
+      background:rgba(243,216,167,.08);
+      padding:12px 18px;
+      border-radius:999px;
+    }
+
+    .tag::before{
+      content:"";
+      width:7px;
+      height:7px;
+      background:var(--coral);
+      border-radius:999px;
+      box-shadow:0 0 18px rgba(255,143,120,.70);
+    }
+
+    .title{
+      font-family:var(--display);
+      font-size:64px;
+      line-height:1.03;
+      letter-spacing:-1.4px;
+      font-weight:400;
+    }
+
+    .title span,
+    .hero h1 span{
+      color:var(--champagne);
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.7;
+      max-width:650px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:18px 30px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      transition:var(--transition);
+      cursor:pointer;
+    }
+
+    .btn-main{
+      background:linear-gradient(90deg, var(--plum), var(--coral));
+      color:white;
+      box-shadow:0 18px 48px rgba(255,143,120,.22);
+    }
+
+    .btn-main:hover{
+      transform:translateY(-4px);
+      box-shadow:0 22px 58px rgba(215,184,255,.28);
+    }
+
+    .btn-outline{
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.05);
+      color:white;
+    }
+
+    .btn-outline:hover{
+      transform:translateY(-4px);
+      border-color:rgba(243,216,167,.36);
+      background:rgba(243,216,167,.08);
+    }
+
+    header{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:20;
+      padding:24px 0;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand-mark{
+      width:48px;
+      height:48px;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:var(--display);
+      font-size:22px;
+      font-weight:400;
+      color:white;
+      background:linear-gradient(135deg, var(--plum), var(--coral));
+      box-shadow:0 14px 36px rgba(255,143,120,.20);
+      position:relative;
+    }
+
+    .brand-mark::after{
+      content:"";
+      position:absolute;
+      inset:-5px;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:22px;
+    }
+
+    .brand-text strong{
+      display:block;
+      font-family:var(--display);
+      font-size:23px;
+      line-height:1;
+      letter-spacing:-.4px;
+      font-weight:400;
+    }
+
+    .brand-text span{
+      display:block;
+      margin-top:5px;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      color:rgba(255,255,255,.58);
+      font-weight:800;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:26px;
+      color:rgba(255,255,255,.66);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .nav-links a{
+      transition:var(--transition);
+    }
+
+    .nav-links a:hover{
+      color:var(--champagne);
+    }
+
+    .nav-cta{
+      border:1px solid rgba(243,216,167,.30);
+      color:var(--champagne);
+      padding:12px 18px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:118px 0 60px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.04fr .96fr;
+      gap:58px;
+      align-items:center;
+    }
+
+    .hero h1{
+      font-family:var(--display);
+      font-size:74px;
+      line-height:1.01;
+      letter-spacing:-1.7px;
+      font-weight:400;
+      margin-top:24px;
+      max-width:780px;
+    }
+
+    .hero p{
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.7;
+      max-width:620px;
+      margin-top:24px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:34px;
+    }
+
+    .hero-proof{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:42px;
+      padding-top:28px;
+      border-top:1px solid rgba(255,255,255,.10);
+      max-width:720px;
+    }
+
+    .proof-item strong{
+      display:block;
+      font-family:var(--display);
+      font-size:36px;
+      line-height:1;
+      color:var(--champagne);
+      font-weight:400;
+      margin-bottom:8px;
+    }
+
+    .proof-item span{
+      display:block;
+      color:var(--muted-2);
+      font-size:12px;
+      line-height:1.45;
+    }
+
+    .hero-image-wrap{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .hero-image-bg{
+      position:absolute;
+      width:420px;
+      height:420px;
+      border-radius:999px;
+      background:linear-gradient(135deg, rgba(215,184,255,.22), rgba(255,143,120,.18));
+      filter:blur(88px);
+      z-index:0;
+    }
+
+    .hero-frame{
+      position:relative;
+      z-index:2;
+      width:100%;
+      max-width:465px;
+    }
+
+    .hero-frame::before{
+      content:"";
+      position:absolute;
+      inset:42px -18px -18px 42px;
+      border:1px solid rgba(243,216,167,.26);
+      border-radius:32px;
+      z-index:-1;
+    }
+
+    .expert-img{
+      width:100%;
+      max-height:620px;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:32px;
+      filter:drop-shadow(0 34px 50px rgba(0,0,0,.42));
+      aspect-ratio:4/5;
+      background:rgba(255,255,255,.08);
+    }
+
+    .floating-card{
+      position:absolute;
+      z-index:4;
+      left:-30px;
+      bottom:44px;
+      max-width:292px;
+      padding:20px;
+      border-left:3px solid var(--coral);
+      border-radius:22px;
+    }
+
+    .floating-card strong{
+      display:block;
+      font-family:var(--display);
+      font-size:29px;
+      line-height:1;
+      font-weight:400;
+      color:var(--champagne);
+      margin-bottom:8px;
+    }
+
+    .floating-card span{
+      color:var(--muted);
+      font-size:12.5px;
+      line-height:1.5;
+    }
+
+    .center{
+      text-align:center;
+      max-width:850px;
+      margin:0 auto 56px;
+      position:relative;
+      z-index:3;
+    }
+
+    .center .title{
+      margin-top:22px;
+    }
+
+    .center .subtitle{
+      margin:22px auto 0;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+      position:relative;
+      z-index:3;
+    }
+
+    .card{
+      padding:34px;
+      border-radius:26px;
+      transition:var(--transition);
+      min-height:100%;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::after{
+      content:"";
+      position:absolute;
+      width:120px;
+      height:120px;
+      border-radius:999px;
+      background:rgba(255,143,120,.10);
+      right:-52px;
+      top:-52px;
+      transition:var(--transition);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(243,216,167,.28);
+      background:rgba(255,255,255,.075);
+    }
+
+    .card:hover::after{
+      transform:scale(1.2);
+      background:rgba(215,184,255,.12);
+    }
+
+    .card .icon{
+      width:48px;
+      height:48px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:16px;
+      background:rgba(243,216,167,.10);
+      color:var(--champagne);
+      margin-bottom:22px;
+      font-size:22px;
+      font-weight:900;
+      position:relative;
+      z-index:2;
+    }
+
+    .card h3{
+      font-size:23px;
+      line-height:1.15;
+      margin-bottom:14px;
+      font-weight:900;
+      position:relative;
+      z-index:2;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:14.5px;
+      line-height:1.65;
+      position:relative;
+      z-index:2;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:72px;
+      align-items:center;
+      position:relative;
+      z-index:3;
+    }
+
+    .split.reverse{
+      grid-template-columns:1.05fr .95fr;
+    }
+
+    .image-box{
+      position:relative;
+      border-radius:30px;
+      min-height:520px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:rgba(255,255,255,.06);
+    }
+
+    .image-box::after{
+      content:"";
+      position:absolute;
+      inset:28px -24px -24px 28px;
+      border:1px solid rgba(255,143,120,.25);
+      border-radius:30px;
+      z-index:-1;
+    }
+
+    .online-img{
+      width:100%;
+      height:100%;
+      min-height:520px;
+      object-fit:cover;
+      object-position:center;
+      border-radius:30px;
+      filter:saturate(.95) contrast(1.02);
+    }
+
+    .image-overlay-card{
+      position:absolute;
+      left:24px;
+      right:24px;
+      bottom:24px;
+      padding:22px;
+      border-radius:22px;
+      background:rgba(27,16,34,.72);
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(14px);
+    }
+
+    .image-overlay-card strong{
+      display:block;
+      font-family:var(--display);
+      color:var(--champagne);
+      font-size:27px;
+      line-height:1;
+      margin-bottom:8px;
+      font-weight:400;
+    }
+
+    .image-overlay-card span{
+      color:rgba(255,255,255,.72);
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .copy-block .title{
+      margin-top:22px;
+    }
+
+    .copy-block .subtitle{
+      margin-top:22px;
+    }
+
+    .bullets{
+      display:grid;
+      gap:14px;
+      margin-top:30px;
+    }
+
+    .bullet{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      color:rgba(255,255,255,.78);
+      font-size:15px;
+      line-height:1.55;
+    }
+
+    .bullet span{
+      color:var(--champagne);
+      font-weight:900;
+      flex-shrink:0;
+    }
+
+    .steps{
+      display:grid;
+      gap:24px;
+      margin-top:34px;
+    }
+
+    .step{
+      display:grid;
+      grid-template-columns:64px 1fr;
+      gap:18px;
+      align-items:flex-start;
+    }
+
+    .num{
+      font-family:var(--display);
+      color:var(--coral);
+      font-size:44px;
+      line-height:.9;
+      font-weight:400;
+    }
+
+    .step h3{
+      font-size:22px;
+      line-height:1.2;
+      margin-bottom:8px;
+      font-weight:900;
+    }
+
+    .step p{
+      color:var(--muted);
+      font-size:14.5px;
+      line-height:1.65;
+    }
+
+    .objection-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:36px;
+    }
+
+    .objection{
+      padding:24px;
+      border-radius:22px;
+    }
+
+    .objection h3{
+      font-size:18px;
+      margin-bottom:9px;
+      font-weight:900;
+    }
+
+    .objection p{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .check{
+      color:var(--champagne);
+      font-weight:900;
+      margin-right:8px;
+    }
+
+    .about-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:34px;
+    }
+
+    .stat{
+      padding:22px;
+      border-radius:22px;
+    }
+
+    .stat strong{
+      display:block;
+      font-family:var(--display);
+      font-size:34px;
+      line-height:1;
+      color:var(--champagne);
+      font-weight:400;
+      margin-bottom:8px;
+    }
+
+    .stat span{
+      color:var(--muted-2);
+      font-size:12px;
+      line-height:1.45;
+      display:block;
+    }
+
+    .banner{
+      position:relative;
+      overflow:hidden;
+      border-radius:34px;
+      min-height:420px;
+      display:flex;
+      align-items:flex-end;
+      padding:36px;
+      box-shadow:var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(27,16,34,.18), rgba(27,16,34,.92)),
+        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80') center/cover;
+    }
+
+    .banner-content{
+      max-width:760px;
+      position:relative;
+      z-index:2;
+    }
+
+    .banner-content h2{
+      font-family:var(--display);
+      font-size:50px;
+      line-height:1.04;
+      letter-spacing:-1px;
+      margin-top:18px;
+      font-weight:400;
+    }
+
+    .banner-content h2 span{
+      color:var(--champagne);
+    }
+
+    .banner-content p{
+      color:rgba(255,255,255,.78);
+      margin-top:16px;
+      line-height:1.7;
+      font-size:16px;
+    }
+
+    .cta-section{
+      position:relative;
+      overflow:hidden;
+      padding:110px 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(215,184,255,.16), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255,143,120,.15), transparent 35%),
+        linear-gradient(180deg, #27142f, #1b1022);
+      text-align:center;
+    }
+
+    .cta-box{
+      max-width:900px;
+      margin:0 auto;
+      padding:58px 34px;
+      border-radius:34px;
+      border:1px solid rgba(243,216,167,.20);
+      background:rgba(255,255,255,.045);
+      box-shadow:var(--shadow);
+      position:relative;
+      z-index:3;
+    }
+
+    .cta-box .title{
+      margin-top:22px;
+    }
+
+    .cta-box .subtitle{
+      margin:24px auto 0;
+    }
+
+    .cta-box .btn{
+      margin-top:34px;
+    }
+
+    .cta-note{
+      margin-top:18px;
+      color:var(--muted-2);
+      font-size:13px;
+    }
+
+    .faq-wrap{
+      max-width:860px;
+      margin:0 auto;
+      position:relative;
+      z-index:3;
+    }
+
+    details{
+      border-radius:22px;
+      margin-bottom:14px;
+      padding:0;
+      overflow:hidden;
+    }
+
+    details summary{
+      list-style:none;
+      cursor:pointer;
+      padding:22px 24px;
+      font-weight:900;
+      font-size:17px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    details summary::-webkit-details-marker{
+      display:none;
+    }
+
+    details summary::after{
+      content:"+";
+      color:var(--champagne);
+      font-size:24px;
+      line-height:1;
+    }
+
+    details[open] summary::after{
+      content:"−";
+    }
+
+    details p{
+      padding:0 24px 24px;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:14.5px;
+    }
+
+    footer{
+      position:relative;
+      padding:48px 0 34px;
+      overflow:hidden;
+      background:#140b19;
+    }
+
+    .footer-grid{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      padding-bottom:28px;
+      margin-bottom:24px;
+      border-bottom:1px solid rgba(255,255,255,.09);
+    }
+
+    .footer-brand p{
+      color:var(--muted-2);
+      font-size:13px;
+      max-width:430px;
+      line-height:1.6;
+      margin-top:14px;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:22px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      color:rgba(255,255,255,.56);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .footer-links a:hover{
+      color:var(--champagne);
+    }
+
+    .footer-bottom{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      color:rgba(255,255,255,.42);
+      font-size:12px;
+    }
+
+    .credit{
+      text-transform:uppercase;
+      letter-spacing:1.7px;
+      color:rgba(255,255,255,.68);
+      font-weight:900;
+    }
+
+    @media(max-width:1024px){
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        min-height:auto;
+        padding:116px 0 70px;
+      }
+
+      .hero-grid,
+      .split,
+      .split.reverse{
+        grid-template-columns:1fr;
+        gap:52px;
+      }
+
+      .hero-text{
+        text-align:center;
+      }
+
+      .hero h1{
+        font-size:60px;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .hero p{
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .hero-actions{
+        justify-content:center;
+      }
+
+      .hero-proof{
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .hero-image-wrap{
+        order:-1;
+      }
+
+      .floating-card{
+        left:20px;
+      }
+
+      .title{
+        font-size:52px;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .objection-grid{
+        grid-template-columns:1fr;
+      }
+
+      .about-stats{
+        grid-template-columns:1fr;
+      }
+
+      .image-box::after{
+        display:none;
+      }
+    }
+
+    @media(max-width:768px){
+      .container{
+        padding:0 20px;
+      }
+
+      .section{
+        padding:68px 0;
+      }
+
+      header{
+        padding:18px 0;
+      }
+
+      .brand-mark{
+        width:40px;
+        height:40px;
+        font-size:18px;
+        border-radius:15px;
+      }
+
+      .brand-mark::after{
+        border-radius:19px;
+      }
+
+      .brand-text strong{
+        font-size:17px;
+      }
+
+      .brand-text span{
+        font-size:9px;
+        letter-spacing:1.4px;
+      }
+
+      .nav-cta{
+        font-size:10px;
+        padding:10px 12px;
+      }
+
+      .hero{
+        padding:92px 0 56px;
+      }
+
+      .hero-grid{
+        gap:30px;
+      }
+
+      .hero-frame{
+        max-width:320px;
+      }
+
+      .hero-frame::before{
+        inset:28px -10px -10px 28px;
+        border-radius:22px;
+      }
+
+      .hero h1{
+        font-size:42px;
+        line-height:1.02;
+        margin-top:20px;
+      }
+
+      .hero p{
+        font-size:15.5px;
+        margin-top:20px;
+      }
+
+      .tag{
+        font-size:9.5px;
+        letter-spacing:2px;
+        padding:10px 14px;
+      }
+
+      .btn{
+        width:100%;
+        padding:17px 18px;
+        font-size:11px;
+      }
+
+      .hero-actions{
+        margin-top:28px;
+      }
+
+      .hero-proof{
+        grid-template-columns:1fr;
+        text-align:left;
+        gap:12px;
+        margin-top:30px;
+        padding-top:22px;
+      }
+
+      .proof-item{
+        display:flex;
+        align-items:center;
+        gap:14px;
+        padding:14px 0;
+        border-bottom:1px solid rgba(255,255,255,.07);
+      }
+
+      .proof-item strong{
+        min-width:82px;
+        font-size:30px;
+        margin-bottom:0;
+      }
+
+      .floating-card{
+        position:relative;
+        left:auto;
+        bottom:auto;
+        margin:-20px auto 0;
+        max-width:290px;
+      }
+
+      .title{
+        font-size:38px;
+      }
+
+      .subtitle{
+        font-size:15.5px;
+      }
+
+      .center{
+        margin-bottom:38px;
+      }
+
+      .card{
+        padding:28px;
+      }
+
+      .split,
+      .split.reverse{
+        gap:40px;
+      }
+
+      .step{
+        grid-template-columns:46px 1fr;
+        gap:14px;
+      }
+
+      .num{
+        font-size:34px;
+      }
+
+      .about-stats{
+        gap:12px;
+      }
+
+      .image-box,
+      .online-img{
+        min-height:390px;
+      }
+
+      .banner{
+        min-height:420px;
+        padding:26px;
+      }
+
+      .banner-content h2{
+        font-size:34px;
+      }
+
+      .cta-section{
+        padding:72px 0;
+      }
+
+      .cta-box{
+        padding:42px 22px;
+        border-radius:28px;
+      }
+
+      details summary{
+        font-size:15px;
+        padding:20px;
+      }
+
+      details p{
+        padding:0 20px 20px;
+      }
+
+      .footer-grid,
+      .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .footer-links{
+        justify-content:center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="#inicio" class="brand">
+          <div class="brand-mark">EB</div>
+          <div class="brand-text">
+            <strong>Dra. Elaine Bezerra</strong>
+            <span>Nutricionista Menopausa</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#para-quem">Para quem é</a>
+          <a href="#metodo">Método</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#duvidas">Dúvidas</a>
+        </nav>
+
+        <a href="#contato" class="nav-cta">Conhecer acompanhamento</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+      <div class="overlay"></div>
+
+      <div class="container">
+        <div class="hero-grid">
+
+          <div class="hero-text">
+            <span class="tag">Climatério • Menopausa • Saúde da mulher 40+</span>
+
+            <h1>
+              Passe pelo climatério e menopausa com <span>leveza</span>, saúde e direção.
+            </h1>
+
+            <p>
+              Acompanhamento nutricional para mulheres 40+ que querem reduzir sintomas, cuidar do corpo, melhorar disposição e viver essa fase com mais equilíbrio.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contato" class="btn btn-main">Quero saber sobre o acompanhamento</a>
+              <a href="#metodo" class="btn btn-outline">Ver como funciona</a>
+            </div>
+
+            <div class="hero-proof">
+              <div class="proof-item">
+                <strong>40+</strong>
+                <span>nutrição direcionada para mulheres na maturidade</span>
+              </div>
+
+              <div class="proof-item">
+                <strong>Clima</strong>
+                <span>cuidado com sintomas do climatério e menopausa</span>
+              </div>
+
+              <div class="proof-item">
+                <strong>Online</strong>
+                <span>atendimento para mulheres em diferentes rotinas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-image-wrap">
+            <div class="hero-image-bg"></div>
+
+            <div class="hero-frame">
+              <img src="./expert.jpg" alt="Dra. Elaine Bezerra Nutricionista" class="expert-img">
+
+              <div class="floating-card glass">
+                <strong>Mulher 40+</strong>
+                <span>Nutrição para acolher seu corpo, seus sintomas e sua nova fase.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="para-quem">
+      <div class="overlay"></div>
+
+      <div class="container">
+        <div class="center">
+          <span class="tag">Para quem é</span>
+          <h2 class="title">Para mulheres que querem viver essa fase sem se sentir <span>perdidas</span>.</h2>
+          <p class="subtitle">
+            O acompanhamento é para quem está passando pelo climatério, menopausa ou percebe mudanças no corpo, no humor, no peso e na disposição.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card glass">
+            <div class="icon">☾</div>
+            <h3>Quer reduzir sintomas</h3>
+            <p>
+              Para mulheres que lidam com calorões, sono ruim, irritação, inchaço, compulsão ou queda de energia.
+            </p>
+          </div>
+
+          <div class="card glass">
+            <div class="icon">✦</div>
+            <h3>Quer cuidar do peso</h3>
+            <p>
+              Para quem sente mais dificuldade para emagrecer ou percebe mudanças no metabolismo depois dos 40.
+            </p>
+          </div>
+
+          <div class="card glass">
+            <div class="icon">♡</div>
+            <h3>Quer se reconectar</h3>
+            <p>
+              Para quem quer entender o próprio corpo, melhorar hábitos e passar por essa fase com mais acolhimento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="overlay"></div>
+
+      <div class="container">
+        <div class="split">
+          <div class="copy-block">
+            <span class="tag">O que muda nessa fase</span>
+            <h2 class="title">Seu corpo mudou. Sua estratégia também precisa <span>mudar</span>.</h2>
+            <p class="subtitle">
+              Muitas mulheres continuam tentando emagrecer e se cuidar do mesmo jeito de antes, mas o climatério e a menopausa exigem um olhar diferente para hormônios, sono, intestino, massa muscular e rotina.
+            </p>
+
+            <div class="bullets">
+              <div class="bullet"><span>✓</span> O metabolismo pode mudar e exigir uma estratégia mais inteligente.</div>
+              <div class="bullet"><span>✓</span> Sono, estresse e sintomas impactam fome, energia e disposição.</div>
+              <div class="bullet"><span>✓</span> Dietas restritivas podem piorar compulsão, cansaço e frustração.</div>
+              <div class="bullet"><span>✓</span> Com acompanhamento, você entende seu corpo e ajusta o caminho.</div>
+            </div>
+          </div>
+
+          <div class="objection-grid">
+            <div class="objection glass">
+              <h3><span class="check">✓</span>“Meu corpo não responde”</h3>
+              <p>Depois dos 40, o plano precisa considerar hormônios, massa muscular, rotina e sintomas.</p>
+            </div>
+
+            <div class="objection glass">
+              <h3><span class="check">✓</span>“Tenho muitos calorões”</h3>
+              <p>A alimentação pode fazer parte de uma estratégia de cuidado com sintomas e bem-estar.</p>
+            </div>
+
+            <div class="objection glass">
+              <h3><span class="check">✓</span>“Engordei sem perceber”</h3>
+              <p>A ideia é entender o que mudou e construir um caminho possível para retomar controle.</p>
+            </div>
+
+            <div class="objection glass">
+              <h3><span class="check">✓</span>“Estou sem energia”</h3>
+              <p>O acompanhamento olha para rotina, sono, alimentação, exames e constância.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="metodo">
+      <div class="overlay"></div>
+
+      <div class="container">
+        <div class="split">
+          <div class="image-box">
+            <img 
+              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=80" 
+              alt="Bem-estar feminino e equilíbrio na menopausa"
+              class="online-img"
+            >
+
+            <div class="image-overlay-card">
+              <strong>Equilíbrio na nova fase</strong>
+              <span>Nutrição para cuidar do corpo, sintomas, energia e bem-estar.</span>
+            </div>
+          </div>
+
+          <div class="copy-block">
+            <span class="tag">Método de acompanhamento</span>
+            <h2 class="title">Um plano feito para sua fase, seus sintomas e sua <span>rotina</span>.</h2>
+            <p class="subtitle">
+              A consulta une escuta, avaliação nutricional, exames, estratégia alimentar e ajustes para ajudar você a atravessar essa fase com mais leveza.
+            </p>
+
+            <div class="steps">
+              <div class="step">
+                <div class="num">01</div>
+                <div>
+                  <h3>Entendimento da sua fase</h3>
+                  <p>Avaliação da rotina, sintomas, histórico, exames, sono, alimentação, peso e principais dificuldades.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="num">02</div>
+                <div>
+                  <h3>Estratégia nutricional individual</h3>
+                  <p>Plano alimentar pensado para climatério, menopausa, saúde metabólica, energia e rotina real.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="num">03</div>
+                <div>
+                  <h3>Execução com leveza</h3>
+                  <p>Orientações práticas para cuidar da alimentação sem terrorismo, culpa ou restrição extrema.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="num">04</div>
+                <div>
+                  <h3>Ajustes durante o processo</h3>
+                  <p>O acompanhamento permite adaptar a estratégia conforme sintomas, adesão e evolução.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="overlay"></div>
+
+      <div class="container">
+        <div class="split reverse">
+          <div class="copy-block">
+            <span class="tag">Sua nutri</span>
+            <h2 class="title">Dra. Elaine Bezerra: nutrição para climatério, menopausa e <span>mulheres 40+</span>.</h2>
+
+            <p class="subtitle">
+              Dra. Elaine Bezerra ajuda mulheres a passarem pelo climatério e menopausa com mais leveza, acolhimento e estratégia nutricional.
+            </p>
+
+            <p class="subtitle">
+              Seu atendimento é voltado para mulheres 40+ que querem cuidar dos sintomas, da saúde, da alimentação e da relação com o corpo nessa nova fase.
+            </p>
+
+            <div class="bullets">
+              <div class="bullet"><span>✓</span> Nutrição para climatério e menopausa.</div>
+              <div class="bullet"><span>✓</span> Cuidado com sintomas, rotina, exames e qualidade de vida.</div>
+              <div class="bullet"><span>✓</span> Atendimento online com foco em mulheres 40+.</div>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat glass">
+                <strong>40+</strong>
+                <span>cuidado nutricional para mulheres maduras</span>
+              </div>
+              <div class="stat glass">
+                <strong>Menop</strong>
+                <span>estratégia para climatério e menopausa</span>
+              </div>
+              <div class="stat glass">
+                <strong>Online</strong>
+                <span>acompanhamento para diferentes rotinas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-box">
+            <img 
+              src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80" 
+              alt="Cuidado feminino, saúde e bem-estar"
+              class="online-img"
+            >
+
+            <div class="image-overlay-card">
+              <strong>Cuidado feminino</strong>
+              <span>Um olhar acolhedor para o corpo, os sintomas e a saúde da mulher.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="overlay"></div>
+
+      <div class="container">
+        <div class="banner">
+          <div class="banner-content">
+            <span class="tag">Nova fase, nova estratégia</span>
+            <h2>Você não precisa atravessar a menopausa se sentindo <span>sozinha</span>.</h2>
+            <p>
+              Com orientação certa, é possível entender seu corpo, cuidar dos sintomas, melhorar hábitos e viver essa etapa com mais segurança e leveza.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="overlay"></div>
+
+      <div class="container">
+        <div class="center">
+          <span class="tag">O que você recebe</span>
+          <h2 class="title">Mais clareza, mais acolhimento e menos <span>frustração</span>.</h2>
+          <p class="subtitle">
+            Um acompanhamento nutricional pensado para mulheres que querem cuidar do corpo e dos sintomas com estratégia.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card glass">
+            <div class="icon">01</div>
+            <h3>Plano alimentar individual</h3>
+            <p>Estratégia pensada para sua fase, sintomas, exames, rotina, preferências e objetivo.</p>
+          </div>
+
+          <div class="card glass">
+            <div class="icon">02</div>
+            <h3>Cuidado com sintomas</h3>
+            <p>Orientação nutricional para apoiar energia, sono, bem-estar, saciedade e qualidade de vida.</p>
+          </div>
+
+          <div class="card glass">
+            <div class="icon">03</div>
+            <h3>Acompanhamento com leveza</h3>
+            <p>Ajustes durante o processo para manter constância sem culpa, sem extremos e sem abandono.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contato">
+      <div class="container">
+        <div class="cta-box">
+          <span class="tag">Comece agora</span>
+          <h2 class="title">Essa fase pode ser mais leve quando você tem <span>direção</span>.</h2>
+          <p class="subtitle">
+            Clique no botão abaixo e fale diretamente pelo WhatsApp para saber mais sobre o acompanhamento com Dra. Elaine Bezerra.
+          </p>
+
+          <a href="https://api.whatsapp.com/send?phone=5511969285188&text=Ol%C3%A1%20Elaine%2C%20vim%20pela%20bio%20do%20seu%20instagram%20e%20gostaria%20de%20saber%20sobre%20seu%20acompanhamento.%20" target="_blank" class="btn btn-main">
+            Falar com Elaine no WhatsApp
+          </a>
+
+          <div class="cta-note">
+            Atendimento online • Climatério • Menopausa • Nutrição para mulheres 40+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="duvidas">
+      <div class="overlay"></div>
+
+      <div class="container">
+        <div class="center">
+          <span class="tag">Dúvidas frequentes</span>
+          <h2 class="title">Antes de começar</h2>
+        </div>
+
+        <div class="faq-wrap">
+          <details class="glass">
+            <summary>O acompanhamento é personalizado?</summary>
+            <p>Sim. A estratégia considera sua fase, sintomas, exames, rotina, histórico alimentar, preferências e objetivo.</p>
+          </details>
+
+          <details class="glass">
+            <summary>Serve para climatério e menopausa?</summary>
+            <p>Sim. O atendimento é voltado para mulheres que estão passando por mudanças relacionadas ao climatério, menopausa e fase 40+.</p>
+          </details>
+
+          <details class="glass">
+            <summary>Vou precisar fazer dieta muito restrita?</summary>
+            <p>Não. O foco é construir uma alimentação possível, estratégica e alinhada à sua saúde, sem terrorismo nutricional.</p>
+          </details>
+
+          <details class="glass">
+            <summary>O acompanhamento é online?</summary>
+            <p>Sim. O atendimento pode ser realizado online, permitindo acompanhamento mesmo para quem não está em Mogi das Cruzes.</p>
+          </details>
+
+          <details class="glass">
+            <summary>Como faço para iniciar?</summary>
+            <p>Clique no botão de WhatsApp, envie sua mensagem e receba as orientações sobre agenda e próximos passos.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#inicio" class="brand">
+            <div class="brand-mark">EB</div>
+            <div class="brand-text">
+              <strong>Dra. Elaine Bezerra</strong>
+              <span>Nutricionista Menopausa</span>
+            </div>
+          </a>
+
+          <p>
+            Nutrição para climatério, menopausa e mulheres 40+ que querem viver essa fase com mais leveza.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#inicio">Início</a>
+          <a href="#para-quem">Para quem é</a>
+          <a href="#metodo">Método</a>
+          <a href="#contato">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Dra. Elaine Bezerra. Todos os direitos reservados.</p>
+        <p class="credit">Feito por DORYAN</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
